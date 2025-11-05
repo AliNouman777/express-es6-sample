@@ -1,0 +1,12 @@
+version: 0.2
+phases:
+  install:
+    commands:
+      - echo "Using Node $(node -v)"
+      - npm ci || npm install
+  build:
+    commands:
+      - echo "Running build phase (no-op for Express sample)"
+artifacts:
+  files:
+    - '**/*'
